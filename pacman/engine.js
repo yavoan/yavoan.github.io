@@ -1,8 +1,9 @@
 var canvas = document.getElementById("game");
 var context = canvas.getContext("2d");
 var pacImage = new Image();
+pacImage.src = "pacsheet.png";
 var ghostImage = new Image();
-
+ghostImage.src= "ghostsheet.png";
 var score;
 var interval;
 //final sizes
@@ -19,6 +20,7 @@ function pacman(){
     this.x = 240;
     this.y = 240;
     this.size = 20;
+    this.offset = 0;
 }
 function ghos(){
     this.name = "ghost1";
@@ -27,6 +29,7 @@ function ghos(){
     this.size = 20;
     this.d= 1;
     this.nd =0;
+    this.offset =0;
 }
 var pac;
 var ghost1;
@@ -46,19 +49,19 @@ function ghostCoordinates(ghost){
         switch (ghost.d){
             case 0:
                 ghost.y-=4;
-                ghostImage.src = "ghostup.png";
+                ghost.offset =1; 
                 break;
             case 1:
                 ghost.y+=4;
-                ghostImage.src = "ghostdown.png";
+                ghost.offset = 0;
                 break;
             case 2:
                 ghost.x-=4;
-                ghostImage.src = "ghostleft.png";
+                ghost.offset = 2;
                 break;
             case 3:
                 ghost.x+=4;
-                ghostImage.src = "ghostright.png";
+                ghost.offset = 3;
                 break;
         }
     }
@@ -166,22 +169,22 @@ function keyHandler(e){
         //up
         case 38:
             nextDirection = 0;
-            pacImage.src = "pacup.png";            
+            pac.offset = 3;            
             break;
         //down
         case 40:
             nextDirection = 1;
-            pacImage.src = "pacdown.png";
+            pac.offset = 1; 
             break;
         //left
         case 37:
             nextDirection = 2;
-            pacImage.src = "pacleft.png";
+            pac.offset = 0; 
             break;
         //right
         case 39:
             nextDirection = 3;
-            pacImage.src = "pacright.png";
+            pac.offset = 2; 
             break;   
     }
 }
@@ -297,11 +300,11 @@ function startGame(){
     score = 0;
     trap = false;
     pac = new pacman();
-    pacImage.src = "pacup.png";
+    pac.offset = 3; 
     ghost1 = new ghos();
     ghost2 = new ghos();
     ghost2.name = "ghost2";
-    ghostImage.src = "ghostdown.png";
+    //ghostImage.src = "ghostdown.png";
     ghost2.y=400;
     timeCheck=0;
     dotsLeft=1;
@@ -325,9 +328,9 @@ function update(){
     updateCoordinates();
     ghostCoordinates(ghost1);
     ghostCoordinates(ghost2);
-    context.drawImage(pacImage,pac.x,pac.y,pac.size,pac.size);
-    context.drawImage(ghostImage,ghost1.x,ghost1.y,ghost1.size,ghost1.size);
-    context.drawImage(ghostImage,ghost2.x,ghost2.y,ghost2.size,ghost2.size);
+    context.drawImage(pacImage,300*pac.offset,0,300,300,pac.x,pac.y,pac.size,pac.size);
+    context.drawImage(ghostImage,457*ghost1.offset,0,457,457,ghost1.x,ghost1.y,ghost1.size,ghost1.size);
+    context.drawImage(ghostImage,457*ghost2.offset,0,457,457,ghost2.x,ghost2.y,ghost2.size,ghost2.size);
    
     //if(ghost1.x == pac.x && ghost1.y == pac.y)
     if(ghost1.x<pac.x+5 && ghost1.x>pac.x-5)
