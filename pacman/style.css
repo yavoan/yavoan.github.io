@@ -5,3 +5,8 @@ h2{
     display: block;
     margin: auto;
 }
+#rules{
+    position: absolute;
+    left: 910px;
+    top: 100px;
+}

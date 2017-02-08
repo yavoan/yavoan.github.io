@@ -317,11 +317,12 @@ function clear(){
     context.clearRect(0,0,final_border_width,final_border_height);
 }
 function update(){
-    if (dotsLeft==0 && trap==true){
+    drawBoard();
+      if (dotsLeft==0 && trap==true){
         clearInterval(interval);
+        score+=100;
         alert("You've won the Game!");
     }
-    drawBoard();
     updateCoordinates();
     ghostCoordinates(ghost1);
     ghostCoordinates(ghost2);
