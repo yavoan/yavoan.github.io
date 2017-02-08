@@ -317,7 +317,7 @@ function clear(){
     context.clearRect(0,0,final_border_width,final_border_height);
 }
 function update(){
-    if (dotsLeft==0){
+    if (dotsLeft==0 && trap==true){
         clearInterval(interval);
         alert("You've won the Game!");
     }
