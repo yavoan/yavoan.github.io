@@ -16,12 +16,15 @@ var direction;
 var trap;
 //0 = dot, 1 = wall;    25x25
 var board = [];
+//The pacman object. Contains his location and size. Offset is the offset for the sprite sheet.
 function pacman(){
     this.x = 240;
     this.y = 240;
     this.size = 20;
     this.offset = 0;
 }
+//The ghost object. Contains their location and size. Offset is the offset for the sprite sheet.
+//d and nd are direction and next direction. This is just to keep track of their directions.
 function ghos(){
     this.name = "ghost1";
     this.x = 400;
@@ -38,7 +41,9 @@ var dotsLeft =1;
 
 
 //0: up          1: down             2: left            3:right
+//This function basically checks the time and moves the ghosts and updates their sprite sheet offset.
 function ghostCoordinates(ghost){
+    //Have this statement to make sure the ghost uses the proper direction function
     if(ghost.name=="ghost1")
         ghostDirection(ghost);
     else
@@ -67,6 +72,9 @@ function ghostCoordinates(ghost){
     }
 }
 //0: up          1: down             2: left            3:right
+//This function is calculating the best direction to go to get pacman.
+//If there is no best path it chooses one at random.
+//This direction function calculates based on pacmans exact location.
 function ghostDirection(ghost){
     var options = canMove(ghost);
     if(options.length==1){
@@ -97,6 +105,9 @@ function ghostDirection(ghost){
         ghost.nd = options[r];
     }
 }
+//This function is calculating the best direction to go to get pacman.
+//If there is no best path it chooses one at random.
+//This function calculates based on pacmans location +1 tile.
 function ghost2Direction(ghost){
     var options = canMove(ghost);
     if(options.length==1){
@@ -127,6 +138,8 @@ function ghost2Direction(ghost){
         ghost.nd = options[r];
     }
 }
+//This is making sure that the ghosts can move by seeing if there are walls around them.
+//In addition it returns a array that holds the possible moves for the ghost parameter.
 function canMove(g){
     bxright = Math.floor(g.x/20);
     bydown = Math.floor(g.y/20);
@@ -159,6 +172,8 @@ function canMove(g){
     return options;
 
 }
+//Handling input.
+//Controls arrow keys and space bar.
 function keyHandler(e){
     switch (e.keyCode){
         //spacebar
@@ -188,6 +203,7 @@ function keyHandler(e){
             break;   
     }
 }
+//Checking for the dot and updating the game board.When trap is true it activates the +1 tile radius
 function checkDot(bx,by){
     if(board[bx][by]==0){
         board[bx][by]=3;
@@ -230,6 +246,7 @@ function checkDot(bx,by){
 }
 //Pacman is moving 4 pixels for every frame. 50 FPS
 //board[bx][by] ==1 means there is a wall there
+//Updates pacmans coordinates based on user input.
 function updateCoordinates(){
     //bx & by are the board array coordinates because grid is 500x500 pixels
     //but the array is 25x25 
@@ -265,7 +282,7 @@ function updateCoordinates(){
     }
     
 }
-
+//The init function. Basically clears all variables and gets the game ready to start.
 function startGame(){
     //0 = dot, 1 = wall;    25x25
     board = [ 
@@ -311,14 +328,20 @@ function startGame(){
     clearInterval(interval);
     interval = setInterval(updateGame,20);
 }
+//The interval function that keeps the game running at ~60fps.
 function updateGame(){
     clear();
     update();
     timeCheck++;
 }
+//Clears the board so there aren't leftover sprites on the board.
 function clear(){
     context.clearRect(0,0,final_border_width,final_border_height);
 }
+//Main function that calls everything.
+//It draws the board sees if youve won. 
+//calls all the coordinate function and draws the sprites.
+//It also checks to see if pacman has run into a ghost.
 function update(){
     drawBoard();
       if (dotsLeft==0 && trap==true){
@@ -345,16 +368,19 @@ function update(){
     trapCheck(ghost2);
     document.getElementById("score").innerHTML = "Score: "+score;
 }
+//This is to see if the ghosts have fallen into the trap.
 function trapCheck(g){
     if(g.x>=220 && g.x<=260)
         if(g.y<=260 && g.y>=220)
             trap = true;
 }
 //0=dot, 1=wall, 2 = empty tile, 3 = ghost
+//Lose game alert also stops the interval.
 function loseGame(){
     clearInterval(interval);
     alert("You've Lost. Try again by pressing space.");
 }
+//Draws the walls of the board.
 function drawBoard(){
     context.fillStyle="black";
     context.fillRect(0,0,500,500);
@@ -371,17 +397,21 @@ function drawBoard(){
         }
     }
 }
+//Draws the dots of the board.
 function drawDots(a,b){
     context.fillStyle="white";
     context.beginPath();
     context.arc(a*20+10,b*20+10,3,0,2*Math.PI);
     context.fill();
 }
+//Draws the walls.
 function drawWalls(a,b){
     context.fillStyle = "blue";
     context.fillRect(a*20,b*20,20,20);
 }
+//Listener for the keyboard input.
 window.addEventListener("keydown", keyHandler,false);
+//This is the start image so that the user has something to look at before the game.
 window.onload = startImage;
 function startImage(){
     var bg = new Image()
