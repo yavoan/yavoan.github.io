@@ -326,7 +326,7 @@ function startGame(){
     timeCheck=0;
     dotsLeft=1;
     clearInterval(interval);
-    interval = setInterval(updateGame,20);
+    interval = setInterval(20,update);
 }
 //The interval function that keeps the game running at ~60fps.
 function updateGame(){
