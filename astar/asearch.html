@@ -4,14 +4,32 @@
 <title>A* Search</title>
 </head>
 <div>
-    <h2>This is the text area </h2>
-    <textarea rows="10" id="grid" cols="35">Enter the map information here to program the game. e = empty o=object g = goal s = start
-        
-    </textarea>
+    <h2>Create Your own. e=empty, o=object, g=goal, s=start </h2>
+    <h3>Make sure to remove all trailing spaces.</h3>
+    <textarea rows="10" id="grid" cols="35">e e e e e
+e e e e e
+e g e e e
+e e o e e
+e e o e s
+Another Example
+e e e e e e e e e
+s e e o o o e e e
+e e e o o o e e e
+e e o o e e e e e
+e e e e e e e e e
+e e e e o o e e g</textarea>
+    <button type="button" id="submit" text="submit">Submit</button>
+    <h3 id = "stat">Final Length: 0 </h3>
+    <button type="button" id="speedup">Faster</button>
+    <button type="button" id="slowdown">Slower</button>
+    <button type="button" id="h1">Hueristic Original</button>
+    <button type="button" id="h2">Hueristic 2</button>
+    <button type="button" id="h3">Hueristic 3</button>
+    <button type="button" id="h4">Hueristic 4</button>
 </div>
 <h2>A* Search</h2>
 <canvas id="game" width="5000" height="5000"></canvas>
 
-<button type="button" id="submit" text="submit">Submit</button>
+
 <script type="text/javascript" src="a.js"></script>
 </html> 

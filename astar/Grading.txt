@@ -1,0 +1,38 @@
+Begin Default Map (3 defaults): complete 	
+
+Final Values F(x), H(x), and G(x): complete
+	
+Final Path Drawn: complete	
+
+Final Length & #Steps Displayed: complete	
+
+Efficency Smooth Anim: complete
+
+Contral Speed of Animation: complete
+
+At Least Size of 500  cells support (size configurable): complete	
+
+Configurable Environmental Obstacles  placement: complete
+
+Goal (x,y) Configurable placement: complete	
+
+Start (x, y) Configurable placement: complete
+
+Provide a Stepped Speed: incomplete
+
+Report w/  screen shots or Video: complete	
+
+Quality Craftmanship: complete	
+
+Grading.txt: complete
+
+3 Tests for Correctness: complete
+
+Readme.txt: complete	
+
+Demo (MH)   + Q/A + youtube video (quality): inclass.	
+
+Game like look  (you'll need to craft  Sprites & Tiles): Custom tiles for simple easy to read look.
+
+BONUS
+3 Different Heuristics
