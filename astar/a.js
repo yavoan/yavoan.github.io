@@ -7,6 +7,7 @@ var sx =1;
 var sy=2;
 var ex=5;
 var ey=2;
+var steps =0;
 var finArr = [];
 var start;
 var big = true;
@@ -34,10 +35,10 @@ function drawTiles2(){
         //console.log(neighborFullList.length-1);
         if (i<neighborFullList.length){
             var t =neighborFullList[i];
-            console.log(neighborFullList[i]);
+            //console.log(neighborFullList[i]);
             for(var j=0;j<t.length;j++){
                 if (t[j].x == ex && t[j].y == ey || (t[j].x == sx && t[j].y == sy)) {
-                   console.log("t");
+                   //console.log("t");
                    
                 }else{
                      var tx = t[j].x;
@@ -70,6 +71,7 @@ function refresh(){
         neighborFullList = [];
         clearInterval(interval);
         clearInterval(interval2);
+        steps=0;
         
         startGame();
 }
@@ -79,12 +81,13 @@ function startGame(){
     interval2 = setInterval(drawTiles2,animSpeed*.5);
     interval = setInterval(drawTiles,animSpeed);
 
-    document.getElementById("stat").innerHTML= "Final Length: "+finArr.length;
+    document.getElementById("stat").innerHTML = "Final Length: "+finArr.length+" Steps:"+steps;
     document.getElementById("submit").onclick = function (){
         grid=[];
         complete = false;
         tileCount=0;
         tileCount2=0;
+        steps=0;
         neighborFullList = [];
         var t = document.getElementById("grid").value;
         parse(t);
@@ -246,6 +249,7 @@ function astar(start,end){
     var found = false;
     while(open.length!=0){
         var low = 900000;
+        steps++;
         var index;
         for(var i=0;i<open.length;i++){
             if (open[i].f < low){
