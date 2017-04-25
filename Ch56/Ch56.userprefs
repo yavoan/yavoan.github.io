@@ -1,9 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerCollisions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AICircle.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerCollisions.cs" Line="11" Column="38" />
-      <File FileName="Assets\Scripts\DoorManager.cs" Line="24" Column="16" />
+      <File FileName="Assets/Scripts/PowerCell.cs" Line="21" Column="3" />
+      <File FileName="Assets/Scripts/Inventory.cs" Line="32" Column="10" />
+      <File FileName="Assets/Scripts/TriggerZone.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/DoorManager.cs" Line="33" Column="3" />
+      <File FileName="Assets/Scripts/TextHints.cs" Line="23" Column="43" />
+      <File FileName="Assets/Scripts/AICircle.cs" Line="37" Column="13" />
+      <File FileName="Assets/Standard Assets/Characters/ThirdPersonCharacter/Scripts/AICharacterControl.cs" Line="43" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
