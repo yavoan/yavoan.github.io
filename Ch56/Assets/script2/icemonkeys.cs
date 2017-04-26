@@ -15,11 +15,11 @@ public class icemonkeys : MonoBehaviour {
 	void Update () {
 		if (time < 2) {
 			t = transform.position;
-			t.x += .5f;
+			t.x += .25f;
 			transform.position = t;
 		} else if (time > 2 && time < 4) {
 			t = transform.position;
-			t.x -= .5f;
+			t.x -= .25f;
 			transform.position = t;
 		} else
 			time = 0;

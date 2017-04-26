@@ -1,12 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script2/climb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Inventory.cs">
     <Files>
-      <File FileName="Assets/script2/climb.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/Inventory.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TargetCollision.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ThrowTrigger.cs" Line="27" Column="3" />
-      <File FileName="Assets/Scripts/CoconutThrower.cs" Line="23" Column="38" />
+      <File FileName="Assets\script2\climb.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Inventory.cs" Line="64" Column="20" />
+      <File FileName="Assets\Scripts\TargetCollision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ThrowTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CoconutThrower.cs" Line="1" Column="1" />
+      <File FileName="Assets\script2\icemonkeys.cs" Line="1" Column="1" />
+      <File FileName="Assets\script3\Matches.cs" Line="18" Column="20" />
+      <File FileName="Assets\Scripts\TextHints.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
