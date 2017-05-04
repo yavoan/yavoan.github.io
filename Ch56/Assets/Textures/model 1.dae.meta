@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 13fde83772ff8fd44bd14cd61d31b663
+timeCreated: 1493782257
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AllRoot_1
+    100002: ArmL_1
+    100004: ArmR_1
+    100006: Crab__Crab
+    100008: Eye_1
+    100010: ID108
+    100012: ID118
+    100014: ID128
+    100016: ID138
+    100018: ID148
+    100020: ID158
+    100022: ID168
+    100024: ID178
+    100026: ID188
+    100028: ID198
+    100030: instance_0
+    100032: instance_1
+    100034: instance_2
+    100036: instance_3
+    100038: instance_4
+    100040: instance_5
+    100042: instance_6
+    100044: instance_7
+    100046: instance_8
+    100048: instance_9
+    100050: JointRoot_
+    100052: Leg1_1
+    100054: Leg2_1
+    100056: Leg3_1
+    100058: //RootNode
+    100060: skp3615
+    100062: skp_camera_Last_Saved_SketchUp_View
+    400000: AllRoot_1
+    400002: ArmL_1
+    400004: ArmR_1
+    400006: Crab__Crab
+    400008: Eye_1
+    400010: ID108
+    400012: ID118
+    400014: ID128
+    400016: ID138
+    400018: ID148
+    400020: ID158
+    400022: ID168
+    400024: ID178
+    400026: ID188
+    400028: ID198
+    400030: instance_0
+    400032: instance_1
+    400034: instance_2
+    400036: instance_3
+    400038: instance_4
+    400040: instance_5
+    400042: instance_6
+    400044: instance_7
+    400046: instance_8
+    400048: instance_9
+    400050: JointRoot_
+    400052: Leg1_1
+    400054: Leg2_1
+    400056: Leg3_1
+    400058: //RootNode
+    400060: skp3615
+    400062: skp_camera_Last_Saved_SketchUp_View
+    2300000: AllRoot_1
+    2300002: ArmL_1
+    2300004: ArmR_1
+    2300006: Crab__Crab
+    2300008: Eye_1
+    2300010: ID108
+    2300012: ID118
+    2300014: ID128
+    2300016: ID138
+    2300018: ID148
+    2300020: ID158
+    2300022: ID168
+    2300024: ID178
+    2300026: ID188
+    2300028: ID198
+    2300030: JointRoot_
+    2300032: Leg1_1
+    2300034: Leg2_1
+    2300036: Leg3_1
+    3300000: AllRoot_1
+    3300002: ArmL_1
+    3300004: ArmR_1
+    3300006: Crab__Crab
+    3300008: Eye_1
+    3300010: ID108
+    3300012: ID118
+    3300014: ID128
+    3300016: ID138
+    3300018: ID148
+    3300020: ID158
+    3300022: ID168
+    3300024: ID178
+    3300026: ID188
+    3300028: ID198
+    3300030: JointRoot_
+    3300032: Leg1_1
+    3300034: Leg2_1
+    3300036: Leg3_1
+    4300000: AllRoot_1
+    4300002: JointRoot_
+    4300004: ArmL_1
+    4300006: ArmR_1
+    4300008: Eye_1
+    4300010: Leg1_1
+    4300012: Leg2_1
+    4300014: Leg3_1
+    4300016: Crab__Crab
+    4300018: ID108
+    4300020: ID118
+    4300022: ID128
+    4300024: ID138
+    4300026: ID148
+    4300028: ID158
+    4300030: ID168
+    4300032: ID178
+    4300034: ID188
+    4300036: ID198
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
